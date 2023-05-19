@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  {% block head %}
+  <link rel="stylesheet" href="static/CSS/list-of-doctors.css">
+{% endblock %}
+</head>
+<body>
+		<header><a href = "home">
+		<div class="inline-image-heading">
+  	<img src="static/Images/logo.png" style="width:3.25% ; height:auto"></a>
+			<h1>First Advice</h1>
+ 	</div>
+		<nav>
+
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+{% block content %}
+  <h2>List of Doctors</h2>
+      <table>
+          <thead>
+          <tr>
+             <th>Name</th>
+              <th>Specialization</th>
+              <th>Experience</th>
+              <th>Education</th>
+              <th>Email</th>
+              <th>Mob. No.</th>
+              <th>Rating(10)</th>
+          <th>Appointment</th>
+          </tr>
+          </thead>
+    {% for doctor in list %}
+    <tbody>
+          <tr>
+              <td>{{ doctor.first_name }}{{ " " }}{{ doctor.last_name }}</td>
+              <td>{{ doctor.specialization }}</td>
+              <td>{{ doctor.experience }}</td>
+              <td>{{ doctor.education }}</td>
+              <td>{{ doctor.email }}</td>
+              <td>{{ doctor.contact_number }}</td>
+              <td>
+              {% if doctor.get_rating == 0 %}
+              No Feedback given yet
+              {% else %}
+              {{ doctor.get_rating }}
+              {% endif %}
+              </td>
+              <td><a href="appointment?id={{doctor.id}}">Go</a></td>
+          </tr>
+</tbody>
+    {% endfor %}
+          </table>
+{% endblock %}
+</body>

@@ -1,0 +1,115 @@
+/* General styles */
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+.inline-image-heading img {
+  display: inline;
+  vertical-align: middle;
+  margin-right: 10px; /* add some space between the image and heading */
+}
+
+.inline-image-heading h1 {
+  display: inline;
+  vertical-align: middle;
+}
+
+
+header {
+	background-color: #D7D2F9;
+	color: #2C368F;
+	padding: 20px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	display: inline-block;
+}
+
+nav ul li a {
+	color: #000000;
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	background-color: #00000;
+	color: #333;
+}
+
+main {
+	padding: 20px;
+}
+
+h1, h2, h3, h4 {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+#hero{
+    background-image: url("static/Images/DoctorImage.png");
+    background-position: center;
+     background-repeat: no-repeat;
+    background-size: cover;
+	text-align: center;}
+#hero h2 {
+	margin-top: 0;
+}
+
+.button {
+	background-color: #333;
+	color: #fff;
+	display: inline-block;
+	font-size: 16px;
+	margin-top: 20px;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+}
+
+.button:hover {
+	background-color: #fff;
+	color: #333;
+}
+
+#services {
+	margin-top: 40px;
+}
+
+#services h4 {
+	margin-top: 0;
+}
+
+#testimonials {
+	margin-top: 40px;
+	text-align: center;
+}
+
+blockquote {
+	background-color: #f1f1f1;
+	border-left: 10px solid #333;
+	margin: 0;
+	padding: 20px;
+}
+
+cite {
+	display: block;
+	font-style: italic;
+	margin-top: 10px;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+}

@@ -1,0 +1,110 @@
+/* Style for the entire webpage */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Style for the header */
+header {
+	background-color: #D7D2F9;
+	color: #2C368F;
+	padding: 20px;
+}
+
+.inline-image-heading img {
+  display: inline;
+  vertical-align: middle;
+  margin-right: 10px; /* add some space between the image and heading */
+}
+
+.inline-image-heading h1 {
+  display: inline;
+  vertical-align: middle;
+}
+/*header  h1{
+  margin-left: 10px;
+  /*color: #FFFFFF;
+}*/
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	display: inline-block;
+}
+
+nav ul li a {
+	color: #000000;
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	background-color: #00000;
+	color: #333;
+}
+
+/* Style for the list of doctors */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+th {
+  background-color: #D7D2F9;
+    /*color: #FFFFFF;*/
+  text-align: left;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  font-size: 14px;
+}
+
+tr:nth-child(even) {
+  background-color: #F5F5F5;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Style for the appointment link */
+a {
+  background-color: #D7D2F9;
+    /*color: #FFFFFF;*/
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: #0066CC;
+}
+
+/* Style for the page title */
+h2 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #333333;
+  text-align: center;
+}
+
+/* Style for the entire page content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}

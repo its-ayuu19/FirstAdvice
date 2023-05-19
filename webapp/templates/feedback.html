@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Doctor Feedback Form</title>
+     <link rel="stylesheet" href="static/CSS/feedback.css">
+</head>
+<body>
+	<h1>Doctor Feedback Form</h1>
+	<form action="feedback" method="post">
+		{% csrf_token %}
+		<label for="name"></label>
+		<input type="hidden" id="name" name="id" value = {{ id }}><br><br>
+
+		<label for="feedback">Feedback:</label>
+		<textarea id="feedback" name="feedback" rows="5" cols="30" required></textarea><br><br>
+
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

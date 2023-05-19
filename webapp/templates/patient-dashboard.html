@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patient Dashboard</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="static/CSS/patient-dashboard.css">
+</head>
+<body>
+	<header><a href = "home">
+		<div class="inline-image-heading">
+  	<img src="static/Images/logo.png" style="width:3.25% ; height:auto"></a>
+			<h1>First Advice</h1>
+ 	</div>
+		<nav>
+
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<form action="dashboard" method="post">
+		 {% csrf_token %}
+		{% for i in "12345" %}
+  <label for="symptoms">Please select your symptoms {{i}}:</label>
+  <select id="symptoms" name="{{i}}">
+    {% for symptom in symptoms %}
+      <option value="{{ symptom }}">{{ symptom }}</option>
+    {% endfor %}
+
+  </select>
+		<br>
+		{% endfor %}
+
+  <button type="submit">Submit</button>
+
+</form>
+	<form action="suggest-doctor" method="post">
+		{% csrf_token %}
+		{% if disease is not None %}
+		<input type="hidden" name="disease" value="{{ disease }}">
+		<h1>{{ disease }}</h1>
+		<input type="text" name="location" placeholder="Enter location">
+	<button type="submit">Suggest Doctors</button>
+		{% endif %}
+	</form>
+	<h1>{{ list.first_name }}</h1>
+		{% for i in list1 %}
+		<h1>i.first_name</h1>
+	    {% endfor %}
+	<footer>
+		<p>Copyright &copy; 2023</p>
+	</footer>
+</body>
+</html>

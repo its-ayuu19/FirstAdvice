@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="static/CSS/sign-in.css">
+
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+</head>
+<body>
+<div class="signin-form">
+  <h1>Sign In</h1>
+  <form action = "sign-in" method="post">
+    <div class="form-group">
+        {% csrf_token %}
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+      <div class="form-group">
+      <label>{{error}}</label>
+    </div>
+    <button type="submit">Sign In</button>
+       <div class="options">
+        <a href="add-patient">Sign Up</a>
+        <a href="#">Forgot Password</a>
+      </div>
+  </form>
+
+</div>
+
+</body>
+</html>
